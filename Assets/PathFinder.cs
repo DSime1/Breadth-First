@@ -100,6 +100,7 @@ public class PathFinder : MonoBehaviour {
 
             pathSearchIsRunning = false;
 
+
             print("End found therefore stopping");
         }
     }
@@ -133,7 +134,7 @@ public class PathFinder : MonoBehaviour {
 
         else
         {
-            neighbour.SetTopColor(Color.blue);
+            //neighbour.SetTopColor(Color.blue);
             queue.Enqueue(neighbour);
             neighbour.exploredFrom = searchCenter;
         }
@@ -157,7 +158,6 @@ public class PathFinder : MonoBehaviour {
             }
             else{
                 grid.Add(waypoint.GetGridPos(), waypoint);
-
 
                 //change color of the top of the cube
                 waypoint.SetTopColor(Color.magenta);
